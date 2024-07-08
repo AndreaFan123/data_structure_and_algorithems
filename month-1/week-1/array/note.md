@@ -130,7 +130,7 @@ let eleToInsert = 10;
 arr.splice(insertIndx, 0, eleToInsert); // [1, 2, 10, 3, 4, 5]
 ```
 
-> [NOTE] Reference: [splice() Method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
+> [!NOTE] Reference: [splice() Method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
 
 Let's implement our own function, let's clarify the steps:
 

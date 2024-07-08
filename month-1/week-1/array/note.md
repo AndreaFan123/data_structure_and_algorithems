@@ -371,3 +371,17 @@ In real life, there're many applications that use arrays, such as:
 3. Calendar
 4. Address book
 5. Music playlist
+
+## Summary
+
+There is another important data structure called **Linked List**, which is similar to an array, but with some differences, you may wonder "when should I use an array and when should I use a linked list?".
+
+Here are several factors to consider:
+
+1. **Access time**: Arrays have constant access time, while linked lists have linear access time, meaning if you encounter a situation where you need to access elements frequently, you should use an array.
+
+2. **Insertion time**: Arrays have linear insertion time, while linked lists have constant insertion time, meaning if you encounter a situation where you need to insert elements frequently, you should use a linked list.
+
+3. If the data is not changing frequently, you should use an array, otherwise, you should use a linked list.
+
+So sometimes we need to choose between using an array and using a linked list based on the requirements of the application, or we can separate features into different data structures to achieve better performance.

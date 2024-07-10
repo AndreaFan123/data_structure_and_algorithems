@@ -70,7 +70,7 @@ console.log("stackSize", stackSize);
 console.log("isStackEmpty", isStackEmpty);
 ```
 
-![result](./result.png)
+![result](./screenshots/result.png)
 
 ### LeetCode: Valid Parentheses
 

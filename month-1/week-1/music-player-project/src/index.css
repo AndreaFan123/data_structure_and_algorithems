@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-900 font-poppins text-white w-full h-screen  max-w-[500px] mx-auto p-8 text-center flex justify-center items-center;
+  }
+}

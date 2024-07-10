@@ -71,3 +71,35 @@ console.log("isStackEmpty", isStackEmpty);
 ```
 
 ![result](./result.png)
+
+### LeetCode: Valid Parentheses
+
+According to this task, we need to implement a function that accept a string as input, and return a boolean value to indicate whether the input string is valid parentheses.
+
+In this task, let's go through the idea of using stack to solve this problem.
+
+#### What makes a valid parentheses?
+
+It will look like `()` or `[]` or `{}` or a combination of them, like `([])` or `{()}`, even nested like `({[]})`.
+
+Try to look the pattern, we can identify that a valid parentheses needs to have a opening bracket followed by a closing bracket, the left one is always the opening bracket (`(`), and the right one is always the closing bracket(`)`).
+
+#### Why use stack?
+
+Stack is a LIFO data structure, we can push and pop elements from the top of the stack, therefore, we can loop through the string, when we meet a opening bracket, we can push to the stack, and when we meet a closing bracket, we can check if the top element of the stack is the corresponding one, if it is, we can pop from the stack, if not, we can return false.
+
+If the stack is not empty after the loop, we know that there's some brackets are not closed, we can return false.
+
+#### Time complexity Analysis (Big O)
+
+#### Calculating Big O
+
+When it comes to analyzing the time complexity of an algorithm, there're several things that we don't need to consider:
+
+1. Constant doesn't matter
+2. Smaller terms don't matter
+3. Logarithmic terms don't matter
+
+And we only think about the worst case scenario, take this task as an example, we need to loop through the input string, and for each character, we need to push and pop from the stack, we know that there're several operations that we need to do, but we only care about the most expensive one, which is the loop, so the time complexity of this task is `O(n)`, `n` is the length of the input string.
+
+So the time complexity of this task is `O(n)`.

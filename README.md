@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Learning data structures is essential for every developer, but to be honest, it could be intimidating for developers who don't have a computer science background. This repository is created to help developers learn data structures in a more practical way. We will learn data structures with real life analogies.
+Learning data structures is essential for every developer, but to be honest, it could be intimidating for developers who don't have a computer science background like myself. This repository is created to help developers learn data structures in a more practical way. We will learn data structures with real life analogies.
 
 ## Data Structures
 

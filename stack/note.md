@@ -10,13 +10,13 @@ Stack is a linear data structure that follows the **LIFO** (Last In First Out) p
 
 You are a book lover, and enjoy buying books, but you don't have enough space in your book shelf, one day, you decide to stack the books on top of each other, but the one you want to read is the one you put on bottom, so you have to remove all the books on top to get the one you want.
 
-![book-1](./book-1.png)
+![book-1](./screenshots/book-1.png)
 
 So you begin to move the books one by one until you get the one you want.
 
 Stack data structure is like this, the last book you add to the stack will be the first book you remove.
 
-![book-2](./book-2.png)
+![book-2](./screenshots/book-2.png)
 
 ### Stack Data Structure in software development
 
@@ -33,11 +33,11 @@ Stack data structure is like this, the last book you add to the stack will be th
 
 When visit a website, every page we visit is added to the stack.
 
-![browser-1](./browser-1.png)
+![browser-1](./screenshots/browser-1.png)
 
 When we click the back button, essentially we are popping the last page we visited and go back to the previous page.
 
-![browser-2](./browser-2.png)
+![browser-2](./screenshots/browser-2.png)
 
 ### Basic Implementation
 

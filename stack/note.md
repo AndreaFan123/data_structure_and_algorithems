@@ -1,10 +1,26 @@
 # Stack & Queue
 
-## Stack
+## Table of Contents
+
+- [Stack](#stack)
+
+  - [Life Analogy](#life-analogy)
+  - [Stack Data Structure in software development](#stack-data-structure-in-software-development)
+  - [Stack Operations](#stack-operations)
+
+- [Browser History Navigation](#browser-history-navigation)
+- [Basic Implementation](#basic-implementation)
+- [LeetCode: Valid Parentheses](#leetcode-valid-parentheses)
+  - [What makes a valid parentheses?](#what-makes-a-valid-parentheses)
+  - [Why use stack?](#why-use-stack)
+  - [Time complexity Analysis (Big O)](#time-complexity-analysis-big-o)
+  - [Calculating Big O](#calculating-big-o)
+
+### Stack
 
 Stack is a linear data structure that follows the **LIFO** (Last In First Out) principle. The last element added to the stack will be the first element to be removed.
 
-### Life Analogy
+#### Life Analogy
 
 - A pile of books
 
@@ -18,16 +34,18 @@ Stack data structure is like this, the last book you add to the stack will be th
 
 ![book-2](./screenshots/book-2.png)
 
-### Stack Data Structure in software development
+#### Stack Data Structure in software development
 
 - Browser History Navigation
 - Undo operation in text editors
 
-### Stack Operations
+#### Stack Operations
 
 - **Push**: Add an element to the top of the stack
 - **Pop**: Remove an element from the top of the stack
 - **Peek**: Get the top element of the stack without removing it 👀
+
+---
 
 ### Browser History Navigation
 
@@ -38,6 +56,8 @@ When visit a website, every page we visit is added to the stack.
 When we click the back button, essentially we are popping the last page we visited and go back to the previous page.
 
 ![browser-2](./screenshots/browser-2.png)
+
+---
 
 ### Basic Implementation
 
@@ -71,6 +91,8 @@ console.log("isStackEmpty", isStackEmpty);
 ```
 
 ![result](./screenshots/result.png)
+
+---
 
 ### LeetCode: Valid Parentheses
 

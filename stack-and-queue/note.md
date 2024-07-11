@@ -1,20 +1,6 @@
-# Stack & Queue
+# Stack and Queue
 
 ## Table of Contents
-
-- [Stack](#stack)
-
-  - [Life Analogy](#life-analogy)
-  - [Stack Data Structure in software development](#stack-data-structure-in-software-development)
-  - [Stack Operations](#stack-operations)
-
-- [Browser History Navigation](#browser-history-navigation)
-- [Basic Implementation](#basic-implementation)
-- [LeetCode: Valid Parentheses](#leetcode-valid-parentheses)
-  - [What makes a valid parentheses?](#what-makes-a-valid-parentheses)
-  - [Why use stack?](#why-use-stack)
-  - [Time complexity Analysis (Big O)](#time-complexity-analysis-big-o)
-  - [Calculating Big O](#calculating-big-o)
 
 ### Stack
 
@@ -32,6 +18,10 @@ So you begin to move the books one by one until you get the one you want.
 
 Stack data structure is like this, the last book you add to the stack will be the first book you remove.
 
+- In Accounting
+
+LIFO is used in accounting to value inventory, the cost of goods sold (COGS) is calculated based on the last item that was added to the inventory.
+
 ![book-2](./screenshots/book-2.png)
 
 #### Stack Data Structure in software development
@@ -47,7 +37,7 @@ Stack data structure is like this, the last book you add to the stack will be th
 
 ---
 
-### Browser History Navigation
+#### Browser History Navigation
 
 When visit a website, every page we visit is added to the stack.
 
@@ -59,7 +49,7 @@ When we click the back button, essentially we are popping the last page we visit
 
 ---
 
-### Basic Implementation
+#### Basic Implementation
 
 In JS or TS, there no built-in stack data structure, but we can use an array or linked list to simulate a stack.
 
@@ -94,19 +84,19 @@ console.log("isStackEmpty", isStackEmpty);
 
 ---
 
-### LeetCode: Valid Parentheses
+#### LeetCode question for stack: Valid Parentheses
 
 According to this task, we need to implement a function that accept a string as input, and return a boolean value to indicate whether the input string is valid parentheses.
 
 In this task, let's go through the idea of using stack to solve this problem.
 
-#### What makes a valid parentheses?
+##### What makes a valid parentheses?
 
 It will look like `()` or `[]` or `{}` or a combination of them, like `([])` or `{()}`, even nested like `({[]})`.
 
 Try to look the pattern, we can identify that a valid parentheses needs to have a opening bracket followed by a closing bracket, the left one is always the opening bracket (`(`), and the right one is always the closing bracket(`)`).
 
-#### Why use stack?
+##### Why use stack?
 
 Stack is a LIFO data structure, we can push and pop elements from the top of the stack, therefore, we can loop through the string, when we meet a opening bracket, we can push to the stack, and when we meet a closing bracket, we can check if the top element of the stack is the corresponding one, if it is, we can pop from the stack, if not, we can return false.
 
@@ -125,3 +115,73 @@ When it comes to analyzing the time complexity of an algorithm, there're several
 And we only think about the worst case scenario, take this task as an example, we need to loop through the input string, and for each character, we need to push and pop from the stack, we know that there're several operations that we need to do, but we only care about the most expensive one, which is the loop, so the time complexity of this task is `O(n)`, `n` is the length of the input string.
 
 So the time complexity of this task is `O(n)`.
+
+---
+
+### Queue
+
+Queue is another linear data structure that follows the **FIFO** (First in, First out) principle. The first element added to the queue will be the first element to be removed.
+
+#### Life Analogy
+
+- A line of people in front of a food truck.
+
+![queue-1](./screenshots/queue-1.png)
+
+**FIFO** describe the behavior of the person inside the highlighted box, he will be the first one to get the food and leave the line.
+
+There're several operations that we can do with a queue:
+
+- **Enqueue**: Add an element to the end of the queue, like the person inside the blue box, he's the last one to join the line, and whoever behind him will be added after him.
+
+- **Dequeue**: Remove an element from the front of the queue,imagine that whoever gets the food will leave the line.
+
+- **Peek**: Get the front element of the queue without removing it. Could the chief of the food truck wants to share candies with some of the kids in the line with their families, so the assistant will check kids' position in the line without removing them.
+
+Here is a table to help you visualize the operations:
+
+| Operation | description                                            | Time Complexity |
+| --------- | ------------------------------------------------------ | --------------- |
+| push      | Add an element to the end of the queue                 | O(1)            |
+| pop       | Remove an element from the front of the queue          | O(1)            |
+| peek      | Get the front element of the queue without removing it | O(1)            |
+
+#### Queue Data Structure in software development
+
+- Task scheduling
+- 💡 Asynchronous Processing (Important if you are a JS developer)
+- Printers
+
+#### Basic Implementation
+
+In JS or TS, there no built-in queue data structure, but we can use an array or linked list to simulate a queue.
+
+```typescript
+// Use array to create queue
+
+const queue: number[] = [];
+
+// Start adding some numbers
+
+queue.push(1);
+queue.push(3);
+queue.push(7);
+
+// Dequeue elements
+const firstElement = queue.shift();
+
+// Peeking elements
+const peek = queue[0];
+
+// Check size
+const queueSize = queue.length;
+
+// Check if queue is empty
+const isQueueEmpty = queueSize === 0;
+
+console.log("queue", queue); // [3, 7]
+console.log("firstElement", firstElement); // 1
+console.log("peek", peek); // 3
+console.log("queueSize", queueSize); // 2
+console.log("isQueueEmpty", isQueueEmpty); // false
+```

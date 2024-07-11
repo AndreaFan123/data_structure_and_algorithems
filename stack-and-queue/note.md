@@ -2,6 +2,19 @@
 
 ## Table of Contents
 
+- [Stack](#stack)
+  - [Life Analogy](#life-analogy)
+  - [Stack Data Structure in software development](#stack-data-structure-in-software-development)
+  - [Stack Operations](#stack-operations)
+  - [Browser History Navigation](#browser-history-navigation)
+  - [Basic Implementation](#basic-implementation)
+  - [LeetCode question for stack: Valid Parentheses](#leetcode-question-for-stack-valid-parentheses)
+  - [Time complexity Analysis (Big O)](#time-complexity-analysis-big-o)
+- [Queue](#queue)
+  - [Life Analogy](#life-analogy-1)
+  - [Queue Data Structure in software development](#queue-data-structure-in-software-development)
+  - [Basic Implementation](#basic-implementation-1)
+
 ### Stack
 
 Stack is a linear data structure that follows the **LIFO** (Last In First Out) principle. The last element added to the stack will be the first element to be removed.

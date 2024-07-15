@@ -198,3 +198,37 @@ console.log("peek", peek); // 3
 console.log("queueSize", queueSize); // 2
 console.log("isQueueEmpty", isQueueEmpty); // false
 ```
+
+#### Circular Queue
+
+What is a circular queue? A circular queue is a queue that wraps around and connects the last element to the first element, below is a diagram to help you visualize the concept.
+
+![linear-circular-queue](./screenshots/linear-circular-queue.png)
+
+When we try to dequeue an element from the queue, in linear queue, we move the front pointer to the next element(to the right), but if want to enqueue an element, we know that we need to insert at the end of the queue, but in linear queue, there's no space for us to insert, in this situation, circular queue comes in handy.
+
+Like the shape of a circle, we connect the end of the queue to the front of the queue, so when we try to enqueue an element, we can insert at the end of the queue, if we want to enqueue another element, we can insert at the next position of the last element, and so on.
+
+For example, we want to insert element 35, we can't do this in a linear queue, but in a circular queue, we can insert at the next position of the last element.
+
+![linear-circular-queue](./screenshots/linear-circular-2.png)
+
+##### Advantages of Circular Queue
+
+- Efficient use of memory
+- Can be used for both FIFO ans LIFO data structures.
+- Better performance than linear queue.
+
+##### Disadvantages of Circular Queue
+
+- Limited capacity, might cause overflow if the queue is full.
+- More complex than linear queue.
+- Difficult to implement and debug sometimes.
+
+#### How to implement a circular queue?
+
+In circular array, `front` and `rear` need to loop back to the beginning of the array when they reach the end of the array. We can use the modulo operator `%` to achieve this.
+
+##### Modulo Operator
+
+The modulo operator `%` returns the remainder of a division operation, for example, `5 % 3` will return `2`, because `5 / 3` equals `1` with a remainder of `2`.

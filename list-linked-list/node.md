@@ -76,6 +76,9 @@ Output: [1,2]
 
 ##### Solutions
 
-- Use double loop to find the answer, time complexity is `O(n^2)`
-- Use hash table to store the value and index, time complexity is `O(n)`
-- Use two pointers to find the answer, time complexity is `O(nlogn)`
+- Use double loop to find the answer, time complexity is `O(n^2)` (Check code of `two_sum_approach_1.ts`)
+- Use hash table to store the value and index, time complexity is `O(n)` (Check code of `two_sum_approach_2.ts`)
+
+#### Visualizing solution of using hash table
+
+![hash-table](./screenshots/hash-table.png)

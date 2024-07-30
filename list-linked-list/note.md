@@ -2,6 +2,14 @@
 
 ## Table of Contents
 
+- [List](#list)
+  - [Memory size of an array](#memory-size-of-an-array)
+  - [Accessing Elements](#accessing-elements)
+  - [Life Analogy](#life-analogy)
+  - [LeetCode question for Array: Two Sum](#leetcode-question-for-array-two-sum)
+- [Linked List](#linked-list)
+  - [Node](#node)
+
 ### List
 
 An array is a linear data structure that stores elements in contiguous memory locations. Different programming languages provide different implementations of arrays, for example in Python, we have lists, in JavaScript, we have arrays, etc.
@@ -82,3 +90,25 @@ Output: [1,2]
 #### Visualizing solution of using hash table
 
 ![hash-table](./screenshots/hash-table.png)
+
+---
+
+### Linked List
+
+As we already know that if we want to install memory using array, we need to install memory in a contiguous memory location, if we have a large arrays, it would be hard to find a contiguous memory space, in this situation **linked list** comes in handy.
+
+#### Each element is a node object
+
+Linked list is also a linear data structure, its element is a node object, and nodes are interconnected through **references (pointers)**. A reference (pointer) is a address of the memory location where the next node is stored, we can access memory in a non-contiguous memory location.
+
+![linked-list](./screenshots/linked-list.png)
+
+- The first node is called **head node**.
+- The last node is called **tail node**.
+- In language like C or C++, the reference is also called **pointer**.
+
+![linked-list-2](./screenshots/linked-list-2.png)
+
+#### Occupy more memory
+
+Because a linked list is a collection of nodes, and each node contains a reference to the next node, it occupies more memory than an array.

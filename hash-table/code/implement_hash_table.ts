@@ -30,6 +30,7 @@ class HashTable {
         return this.table[index][i];
       }
     }
+    return null;
   }
 
   printAll() {

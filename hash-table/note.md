@@ -4,7 +4,7 @@
 
 ### Introduction
 
-Hash table also called has map, it is a data structure that stores **key-value** paris. We can look up the value by key in **constant time (O(1))**, which is very efficient.
+**Hash table** also called **hash map**, it is a data structure that stores **key-value** pairs. We can look up the value by key in **constant time (O(1))**, which is very efficient.
 
 ### Comparison with Array and Linked List
 
@@ -77,3 +77,76 @@ for (const [k, v] of map) {
   console.log(k, v); // 1 one, 2 two, 3 three, 4 four
 }
 ```
+
+### Objects vs. Hash Map
+
+We know that we can implement a key-value pair data structure using object in JS, so is this mean that object is a hash map? The answer is No, but also Yes.
+
+We can treat object as a special implementation of the hash map data structure, but we also need to keep in mins that object class adds its own keys.
+
+In 2015, ES6 introduced the `Map` class, which is a real hash map data structure.
+
+### Hash Function
+
+- In CS, hash function is a commonly used idea, i.e., Password are hashed before storing in the database.
+- JS objects and arrays are hashed.
+- The principle of a hash function is to convert one value to another.
+
+#### Division Method
+
+- **m** is the size of the hash table.
+
+Let's say we have a hash table of length 10 (0, 1, 2, 3, 4, 5, 6, 7, 8, 9), so the m is 10.
+
+- **n** is the number of elements to store into hash table.
+
+Let's say we have 5 elements to store into hash table, so the n is 5.
+
+- Formula: `index = key mod(%) m`
+
+- Collision: When two or more objects happen to be hashed into the same index in the hash table.
+
+- Load Factor: `n/m`, it is the ratio of the number of elements to the size of the hash table.
+
+Take the above example, **m** = 10, **n** = 5, n/m = 0.5 (50%), if **m** is getting larger, means that the range of index is getting larger, therefore it is less likely to have a collision, in contrast, if **m** is getting smaller, means that the range of index is getting smaller, therefore it is more likely to have a collision.
+
+In conclusion:
+
+- Smaller load factor(m is bigger): less likely to have a collision.
+- Larger load factor(n is bigger): more likely to have a collision.
+
+#### Multiplication Method
+
+- **m** is the size of the hash table.
+- **n** is the number of elements to store into hash table.
+- **A** is a constant number between 0 and 1, it is a irrational number, a irrational number cannot be expressed as the ratio of two integers.
+- formula: `index = m * (key * A mod(%) 1)`
+
+#### Choose m (Size of Hash Table) Wisely
+
+- Ideally, integer **m** has to be a number that it "far" enough from 2^P, where P is a positive integer.(Because 10^P is divided by 2^P).
+
+```typescript
+m = 8
+
+Kevin with ID 1004
+1004 % 8 = 4
+
+Alice with ID 3012
+3012 % 8 = 4
+
+Jack with ID 5020
+5020 % 8 = 4
+```
+
+See example above, all three people are hashed into the same index 4, which is a collision, therefore we need to choose **m** that is "far" enough from 2^P.
+
+#### Naming Convention
+
+If naming convention is similar, it is more likely to have a collision.
+
+### How to Handle Collision
+
+- Store elements into an array at the same index, which is called **Separate Chaining**, think of it as an array of arrays. Hash table is an array itself, and each element in the hash table is an array.
+
+Let's assuming that after mod operation, we have three elements that are hashed into the same index 4, so we can store them into an array at index 4, like this: [1004, 3012, 5020].

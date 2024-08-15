@@ -2,6 +2,24 @@
 
 ## Table of Contents
 
+- [Introduction](#introduction)
+- [Comparison with Array and Linked List](#comparison-with-array-and-linked-list)
+- [Common Operations](#common-operations)
+  - [Implementation](#implementation)
+- [Three types of ways to traverse a hash table](#three-types-of-ways-to-traverse-a-hash-table)
+  - [Implementation](#implementation-1)
+- [Objects vs. Hash Map](#objects-vs-hash-map)
+- [Hash Function](#hash-function)
+  - [Division Method](#division-method)
+  - [Multiplication Method](#multiplication-method)
+  - [Choose m (Size of Hash Table) Wisely](#choose-m-size-of-hash-table-wisely)
+  - [Naming Convention](#naming-convention)
+- [How to Handle Collision](#how-to-handle-collision)
+- [Parsing string to integer - real world example](#parsing-string-to-integer---real-world-example)
+  - [CSS](#css)
+
+---
+
 ### Introduction
 
 **Hash table** also called **hash map**, it is a data structure that stores **key-value** pairs. We can look up the value by key in **constant time (O(1))**, which is very efficient.

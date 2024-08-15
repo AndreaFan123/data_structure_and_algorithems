@@ -16,6 +16,8 @@
 
 By looking at the table above, we can see that hash table is the most efficient data structure among the three.
 
+---
+
 ### Common Operations
 
 1. **Insert**: Insert a key-value pair into the hash table.
@@ -43,6 +45,8 @@ map.delete(1);
 name = map.get(1);
 console.log(name); // undefined
 ```
+
+---
 
 ### Three types of ways to traverse a hash table
 
@@ -78,6 +82,8 @@ for (const [k, v] of map) {
 }
 ```
 
+---
+
 ### Objects vs. Hash Map
 
 We know that we can implement a key-value pair data structure using object in JS, so is this mean that object is a hash map? The answer is No, but also Yes.
@@ -85,6 +91,8 @@ We know that we can implement a key-value pair data structure using object in JS
 We can treat object as a special implementation of the hash map data structure, but we also need to keep in mins that object class adds its own keys.
 
 In 2015, ES6 introduced the `Map` class, which is a real hash map data structure.
+
+---
 
 ### Hash Function
 
@@ -145,8 +153,49 @@ See example above, all three people are hashed into the same index 4, which is a
 
 If naming convention is similar, it is more likely to have a collision.
 
+---
+
 ### How to Handle Collision
 
 - Store elements into an array at the same index, which is called **Separate Chaining**, think of it as an array of arrays. Hash table is an array itself, and each element in the hash table is an array.
 
 Let's assuming that after mod operation, we have three elements that are hashed into the same index 4, so we can store them into an array at index 4, like this: [1004, 3012, 5020].
+
+### Parsing string to integer - real world example
+
+#### CSS
+
+We know that we can define a color in CSS using a string, like this:
+
+```css
+p {
+  color: black;
+}
+
+.quote {
+  color: red;
+}
+```
+
+But how does the browser know that `black` is `#000000` and `red` is `#FF0000`?
+
+We can store all the color names in a hash table, but the problem is that whether is white or red, they are all strings, we don't have integers to be hashed. So how can we deal with this situation as when hah keys are not integers?
+
+1. We can use the length of the string as the integer, not it's not efficient as many color names could have the same length, leading to collisions.
+
+2. Take the ASCII value of each character in the string and sum them up, then hash the sum.
+
+3. Combine the ASCII value of each character in the string and the length of the string to multiply or add them together, then hash the result.
+
+Why we don't store this kind of information in an array? Because the array is not efficient when it comes to searching, and we need to search the color name in the hash table in constant time.
+
+Using `charCodeAt()` method to get the ASCII value of a character in JS, for example:
+
+```typescript
+const greeting = "Hello World";
+
+// Let say we want to find out e's ASCII
+const index = 1; // 0 is H, 1 is e
+
+console.log(greeting.charCodeAt(index)); // 101
+```

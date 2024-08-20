@@ -44,6 +44,43 @@ Tree is a commonly used data structure, there are two ways to do tree traversal:
   - In-order
   - Post-order
 
-##### Breadth-First Search (BFS)
+---
+
+#### Breadth-First Search (BFS)
 
 BFS is a traversal algorithm that starts traversing the tree from the root node and explores all the nodes at the present depth before moving on to the nodes at the next depth level.
+
+![BFS](./screenshots/tree-bfs.png)
+
+Take a look at the image above, the BFS traversal of the tree is 2, 1, 3, 4, 6, 5, 7, 8
+
+##### Pseudo code of BFS:
+
+```javascript
+BFTT():
+  queue.add(root)
+  for i from 0 to queue.length:
+    currentNode = queue[i]
+    for j from 0 to currentNode's children count - 1:
+      queue.add(currentNode's child)
+```
+
+---
+
+#### Depth-First Search (DFS)
+
+- DFS is a traversal algorithm that process all nodes of a tree by processing the **root**, then recursively processing all subtrees.
+
+- Also known as prefix traversal.
+
+- Method: root -> left -> right
+
+##### Pseudo code of DFS:
+
+```javascript
+PREORDER(node):
+  write(node)
+  for i from 0 to node's children count - 1:
+    // Recursive call
+    PREORDER(node[i])
+```

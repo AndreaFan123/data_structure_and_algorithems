@@ -28,4 +28,22 @@ A tree must satisfy the following conditions:
 
 - Tree must have **one and only one root node**. Image below shows a tree with two root nodes, so it's not a tree.
 
+- Tree in real life examples:
+  - DOM (Document Object Model) in HTML
+  - File System
+
 ![Tree](./screenshots/not-a-tree.png)
+
+#### Tree Traversal
+
+Tree is a commonly used data structure, there are two ways to do tree traversal:
+
+- Breadth-First Search (BFS)
+- Depth-First Search (DFS)
+  - Pre-order
+  - In-order
+  - Post-order
+
+##### Breadth-First Search (BFS)
+
+BFS is a traversal algorithm that starts traversing the tree from the root node and explores all the nodes at the present depth before moving on to the nodes at the next depth level.
